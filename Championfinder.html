@@ -1,0 +1,128 @@
+<!doctype html>
+<html>
+	<head>
+		<title>ChampSelect Championfinder</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+		<meta name="author" content="Alexander Engelhardt">
+		<meta name="description" content="Projekt ChampSelect"> 
+		<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700|Roboto:300,400,700" rel="stylesheet"> 
+		<link rel="stylesheet" href="base.css" type="text/css">
+		<script src="functions.js" async></script>
+	</head>
+	
+	<body>
+	
+	<h1>Championfinder</h1>
+	
+	<div class="navigation">
+		<a href="index.html"><div class="navElement active">Startseite</div></a> 
+		<a href="Championfinder.html"><div class="navElement">Championfinder</div></a>
+		<a href="Direktsuche.html"><div class="navElement">Direktsuche</div></a> 
+		<a href="Profil.html"><div class="navElement">Profil</div></a> 
+	</div>
+	
+	<!-- Contentboxen deklarieren (Links sind Regler, Rechts ist Championübersicht) -->
+	<div id="ChampionBox" class="contentBox">
+	
+		<div id="Links">
+		
+			<!-- Box in Contentbox für Abstand nach rechts und links-->
+			<div id="LKasten">
+				<br><br><br><br>
+				
+				
+				<h3>Leben</h3>
+				<!-- Regler-->																							<!--	https://stackoverflow.com/questions/10004723/html5-input-type-range-show-range-value     -->
+				<form name="registrationForm">
+					<input type="range" name="Leben" 		step="0.5" value="2" min="1" max="3" oninput="OutputId.value = myRange.value" class="slider" id="myRange">
+					<output name="OutputName" id="OutputId">2</output>
+				</form>
+				
+				<h3>Schaden</h3>																			<!--evtl Variablen ändern, um später Zugriff möglich zu machen-->			
+				<form name="registrationForm">
+					<input type="range" name="Schaden" 		step="0.5" value="2" min="1" max="3" oninput="OutputId.value = myRange.value" class="slider" id="myRange">
+					<output name="OutputName" id="OutputId">2</output>
+				</form>
+				
+				<h3>Schwierigkeit</h3>				
+				<form name="registrationForm">
+					<input type="range" name="Schwierigkeit"step="0.5" value="2" min="1" max="3" oninput="OutputId.value = myRange.value" class="slider" id="myRange">
+					<output name="OutputName" id="OutputId">2</output>
+				</form>
+				
+				
+				<script>
+					var slider = document.getElementById("myRange");
+					var output = document.getElementById("demo");
+					output.innerHTML = slider.value; // Display the default slider value
+
+					// Update the current slider value (each time you drag the slider handle)
+					slider.oninput = function() {
+					output.innerHTML = this.value;
+					}
+					
+					
+				</script>
+		
+		
+			</div>
+		</div>
+		
+		
+		<div id="Rechts">																								<!--evtl unnötig, Versuch Champions sichtbar und wieder unsichtbar zu machen-->	
+		
+		<div class="flex-container">																					<!--https://www.w3schools.com/css/css3_flexbox.asp-->
+				<!--1 -->	<div>Aatrox<br><img src="images/Aatrox.png" alt="Aatrox" style="width:100px;height:100px;"></div> 			<div>Ahri</div><div>Akali</div><div>Alistar</div><div>Amumu</div>
+				<!--2 -->	<div>Anivia<br><img src="Aatrox.png" alt="Anivia" style="width:100px;height:100px;"></div>			<div>Annie</div><div>Ashe</div><div>Aurelion Sol</div><div>Azir</div>
+				<!--3 -->	<div>Bard<br><img src="Aatrox.png" alt="Bard" style="width:100px;height:100px;"></div>				<div>Blitzcrank</div><div>Brand</div><div>Braum</div><div>Caitlyn</div>
+				<!--4 -->	<div>Camille<br><img src="Aatrox.png" alt="Camille" style="width:100px;height:100px;"></div>		<div>Cassiopeia</div><div>Cho Gath</div><div>Corki</div><div>Darius</div>
+				<!--5 -->	<div>Diana<br><img src="Aatrox.png" alt="Diana" style="width:100px;height:100px;"></div>			<div>Dr. Mundo</div><div>Draven</div><div>Ekko</div><div>Elise</div>
+				<!--6 -->	<div>Evelynn<br><img src="Aatrox.png" alt="Evelynn" style="width:100px;height:100px;"></div>		<div>Ezreal</div><div>Fiddlesticks</div><div>Fiora</div><div>Fizz</div>
+				<!--7 -->	<div>Galio<br><img src="Aatrox.png" alt="Galio" style="width:100px;height:100px;"></div>			<div>Gangplank</div><div>Garen</div><div>Gnar</div><div>Gragas</div>
+				<!--8 -->	<div>Graves<br><img src="Aatrox.png" alt="Graves" style="width:100px;height:100px;"></div>			<div>Hecarim</div><div>Heimerdinger</div><div>Illaoi</div><div>Irelia</div>
+				<!--9 -->	<div>Ivern<br><img src="Aatrox.png" alt="Ivern" style="width:100px;height:100px;"></div>			<div>Janna</div><div>Jarvan IV</div><div>Jax</div><div>Jayce</div>
+				<!--10 -->	<div>Jhin<br><img src="Aatrox.png" alt="Jhin" style="width:100px;height:100px;"></div>				<div>Jinx</div><div>Kalista</div><div>Karma</div><div>Karthus</div>
+				<!--11 -->	<div>Kassadin<br><img src="Aatrox.png" alt="Kassadin" style="width:100px;height:100px;"></div>		<div>Katarina</div><div>Kayle</div><div>Kayn</div><div>Kennen</div>
+				<!--12 -->	<div>Kha Zix<br><img src="Aatrox.png" alt="Kha Zix" style="width:100px;height:100px;"></div>		<div>Kindred</div><div>Kled</div><div>Kog Maw</div><div>LeBlanc</div>
+				<!--13 -->	<div>Lee Sin<br><img src="Aatrox.png" alt="Lee Sin" style="width:100px;height:100px;"></div>		<div>Leona</div><div>Lissandra</div><div>Lucian</div><div>Lulu</div>
+				<!--14 -->	<div>Lux<br><img src="Aatrox.png" alt="Lux" style="width:100px;height:100px;"></div>				<div>Malphite</div><div>Malzahar</div><div>Maokai</div><div>Master Yi</div>
+				<!--15 -->	<div>Miss Fortune<br><img src="Aatrox.png" alt="Miss Fortune" style="width:100px;height:100px;"></div><div>Mordekaiser</div><div>Morgana</div><div>Nami</div><div>Nasus</div>
+				<!--16 -->	<div>Nautilus<br><img src="Aatrox.png" alt="Nautilus" style="width:100px;height:100px;"></div>		<div>Nidalee</div><div>Nocturne</div><div>Nunu</div><div>Olaf</div>
+				<!--17 -->	<div>Orianna<br><img src="Aatrox.png" alt="Orianna" style="width:100px;height:100px;"></div>		<div>Ornn</div><div>Pantheon</div><div>Poppy</div><div>Quinn</div>
+				<!--18 -->	<div>Rakan<br><img src="Aatrox.png" alt="Rakan" style="width:100px;height:100px;"></div>			<div>Rammus</div><div>Rek Sai</div><div>Renekton</div><div>Rengar</div>
+				<!--19 -->	<div>Riven<br><img src="Aatrox.png" alt="Riven" style="width:100px;height:100px;"></div>			<div>Rumble</div><div>Ryze</div><div>Sejuani</div><div>Shaco</div>
+				<!--20 -->	<div>Shen<br><img src="Aatrox.png" alt="Shen" style="width:100px;height:100px;"></div>				<div>Shyvana</div><div>Singed</div><div>Sion</div><div>Sivir</div>
+				<!--21 -->	<div>Skarner<br><img src="Aatrox.png" alt="Skarner" style="width:100px;height:100px;"></div>		<div>Sona</div><div>Soraka</div><div>Swain</div><div>Syndra</div>
+				<!--22 -->	<div>Tahm Kench<br><img src="Aatrox.png" alt="Tahm Kench" style="width:100px;height:100px;"></div>	<div>Taliyah</div><div>Talon</div><div>Taric</div><div>Teemo</div>
+				<!--23 -->	<div>Thresh<br><img src="Aatrox.png" alt="Thresh" style="width:100px;height:100px;"></div>			<div>Tristana</div><div>Trundle</div><div>Tryndamere</div><div>Twisted Fate</div>
+				<!--24 -->	<div>Twitch<br><img src="Aatrox.png" alt="Twitch" style="width:100px;height:100px;"></div>			<div>Udyr</div><div>Urgot</div><div>Varus</div><div>Vayne</div>
+				<!--25 -->	<div>Veigar<br><img src="Aatrox.png" alt="Veigar" style="width:100px;height:100px;"></div>			<div>Vel Koz</div><div>Vi</div><div>Viktor</div><div>Vladimir</div>
+				<!--26 -->	<div>Volibear<br><img src="Aatrox.png" alt="Volibear" style="width:100px;height:100px;"></div>		<div>Warwick</div><div>Wukong</div><div>Xayah</div><div>Xerath</div>
+				<!--27 -->	<div>Xin Zhao<br><img src="Aatrox.png" alt="Xin Zhao" style="width:100px;height:100px;"></div>		<div>Yasuo</div><div>Yorick</div><div>Zac</div><div>Zed</div>
+				<!--28 -->	<div>Ziggs<br><img src="Aatrox.png" alt="Ziggs" style="width:100px;height:100px;"></div>			<div>Zilean</div><div>Zoe</div><div>Zyra</div>
+		</div>
+		
+		
+		
+		</div>
+		
+		<div id="clear"></div>
+	</div>
+	
+	
+	<script>
+			/* Variablendeklaration */
+			/* EventListener */
+			
+			document.getElementById('button1').addEventListener('click', bevölkerungErmitteln);
+			
+			
+	</script>
+		
+		
+
+
+	</div>
+	</body>
+</html>
